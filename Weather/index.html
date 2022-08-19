@@ -8,6 +8,8 @@
     <title>天气查询</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qweather-icons@1.1.1/font/qweather-icons.css">
 </head>
 
 <body>
@@ -16,63 +18,54 @@
         <div class="weather-side">
             <div class="gradient"></div>
             <div class="date-container">
-                <h2 class="date-dayname" id="date-dayname">周二</h2>
-                <span class="date-day" id="date-day">2022-8-18</span>
-                <span id="location" class="iconfont">&#xe679;北京</span>
+                <!-- <h2 class="date-dayname" id="date-dayname">周二</h2> -->
+                <h1 class="date-day" id="date-day">2022-08-18</h1>
+                <span class="iconfont">&#xe679;</span>
+                <h2 id="location"></h2>
             </div>
             <div class="weather-container">
-                <span class="iconfont" id="weather-1">&#xe637;</span>
+                <i class="qi-301" style="font-size:70px;" id="icon1"></i>
                 <div class="weather-temp" id="weather-temp">25°C</div>
-                <div class="weather-desc" id="weather-desc">晴天</div>
+                <div class="weather-desc" id="weather-desc">晴</div>
             </div>
         </div>
         <!-- 右边部分 -->
         <div class="info-side">
             <div class="today-info-container">
                 <div class="today-info">
-                    <!-- pm -->
-                    <div class="pm clear">
-                        <span class="title">PM2.5</span>
-                        <span class="value">00</span>
+                    <!-- moonPhase -->
+                    <div class="moon-phase clear">
+                        <span class="title">月相</span>
+                        <span class="value" id="moon-phase">00</span>
                     </div>
                     <!-- 湿度 -->
                     <div class="humidity clear">
-                        <span class="title">湿度</span>
-                        <span class="value">00</span>
+                        <span class="title">白天湿度</span>
+                        <span class="value" id="humidity">00</span>
                     </div>
-                    <!-- 风速 -->
+                    <!-- 风向 -->
                     <div class="wind clear">
-                        <span class="title">风速</span>
-                        <span class="value">00</span>
+                        <span class="title">白天风速</span>
+                        <span class="value" id="wind">00</span>
                     </div>
                 </div>
             </div>
             <div class="week-container">
                 <ul class="week-list">
                     <li id="day1">
-                        <span class="iconfont">&#xe637;</span>
-                        <span class="day-time">星期一</span>
+                        <h3>明天</h3>
+                        <i class="qi-301" style="font-size:35px" id="icon2"></i>
                         <span class="day-temp">22°C</span>
                     </li>
                     <li id="day2">
-                        <span class="iconfont">&#xe637;</span>
-                        <span class="day-time">星期二</span>
+                        <h3>后天</h3>
+                        <i class="qi-301" style="font-size:35px" id="icon3"></i>
                         <span class="day-temp">25°C</span>
                     </li>
-                    <li id="day3">
-                        <span class="iconfont">&#xe637;</span>
-                        <span class="day-time">星期三</span>
-                        <span class="day-temp">27°C</span>
-                    </li>
-                    <!-- <li id="day4">
-                        <span class="iconfont">&#xe637;</span>
-                        <span class="day-time">星期四</span>
-                        <span class="day-temp">26°C</span>
-                    </li> -->
                 </ul>
             </div>
             <div class="location-container">
-                <input type="text" placeholder="位置" id="city">
+                <input type="text" placeholder="城市名称" id="city">
                 <button class="location-button" id="location-button">
                     <span class="iconfont">&#xe679;查询</span>
                 </button>

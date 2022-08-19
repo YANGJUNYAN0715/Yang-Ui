@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>天气查询</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/index.js"></script>
 </head>
 
 <body>
@@ -15,14 +16,14 @@
         <div class="weather-side">
             <div class="gradient"></div>
             <div class="date-container">
-                <h2 class="date-dayname">周二</h2>
-                <span class="date-day">2022-8-18</span>
+                <h2 class="date-dayname" id="date-dayname">周二</h2>
+                <span class="date-day" id="date-day">2022-8-18</span>
                 <span id="location" class="iconfont">&#xe679;北京</span>
             </div>
             <div class="weather-container">
                 <span class="iconfont" id="weather-1">&#xe637;</span>
-                <div class="weather-temp">25°C</div>
-                <div class="weather-desc">晴天</div>
+                <div class="weather-temp" id="weather-temp">25°C</div>
+                <div class="weather-desc" id="weather-desc">晴天</div>
             </div>
         </div>
         <!-- 右边部分 -->
@@ -48,31 +49,31 @@
             </div>
             <div class="week-container">
                 <ul class="week-list">
-                    <li>
+                    <li id="day1">
                         <span class="iconfont">&#xe637;</span>
-                        <span class="day-time">星期三</span>
+                        <span class="day-time">星期一</span>
+                        <span class="day-temp">22°C</span>
+                    </li>
+                    <li id="day2">
+                        <span class="iconfont">&#xe637;</span>
+                        <span class="day-time">星期二</span>
                         <span class="day-temp">25°C</span>
                     </li>
-                    <li>
+                    <li id="day3">
                         <span class="iconfont">&#xe637;</span>
                         <span class="day-time">星期三</span>
-                        <span class="day-temp">25°C</span>
+                        <span class="day-temp">27°C</span>
                     </li>
-                    <li>
+                    <!-- <li id="day4">
                         <span class="iconfont">&#xe637;</span>
-                        <span class="day-time">星期三</span>
-                        <span class="day-temp">25°C</span>
-                    </li>
-                    <li>
-                        <span class="iconfont">&#xe637;</span>
-                        <span class="day-time">星期三</span>
-                        <span class="day-temp">25°C</span>
-                    </li>
+                        <span class="day-time">星期四</span>
+                        <span class="day-temp">26°C</span>
+                    </li> -->
                 </ul>
             </div>
             <div class="location-container">
-                <input type="text" placeholder="位置">
-                <button class="location-button">
+                <input type="text" placeholder="位置" id="city">
+                <button class="location-button" id="location-button">
                     <span class="iconfont">&#xe679;查询</span>
                 </button>
             </div>

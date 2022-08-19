@@ -6,6 +6,7 @@ window.onload = function () {
     .then(function (data) {
       console.log(data);
       weather(data);
+      document.getElementById("cityname").innerHTML = "北京";
     });
   var btn = document.getElementById("location-button");
   var city = document.getElementById("city");
@@ -14,24 +15,26 @@ window.onload = function () {
       axios
         .get(
           `https://devapi.qweather.com/v7/weather/3d?location=${
-            getLocationCode[`${city.value}`]
+            getLocationCode[city.value]
           }&key=4426879dbd924be4a3117d52622ceb41`
         )
         .then(function (data) {
           console.log(data);
-          weather(data);
+          weather(data, city.value);
         });
     } else {
       alert("请输入城市名称：");
     }
   };
 };
-function weather(data) {
+function weather(data, cityName) {
+  var cityname = document.getElementById("cityname");
   var location = document.getElementById("location");
   var dateDay = document.getElementById("date-day");
   var weatherTemp = document.getElementById("weather-temp");
   var weatherDesc = document.getElementById("weather-desc");
   var icon1 = document.getElementById("icon1");
+  cityname.innerHTML = cityName;
   location.innerHTML = "日出时间:" + data.data.daily[0].sunset;
   dateDay.innerHTML = data.data.updateTime.slice(0, 10);
   weatherTemp.innerHTML =
@@ -40,7 +43,8 @@ function weather(data) {
       2 +
     "°C";
   weatherDesc.innerHTML = data.data.daily[0].textDay;
-  icon1.classList.replace("qi-301", `qi-${data.data.daily[0].iconDay}`);
+  icon1.classList.remove(icon1.classList.item(0));
+  icon1.classList.add(`qi-${data.data.daily[0].iconDay}`);
 
   var humidity = document.getElementById("humidity");
   var wind = document.getElementById("wind");
@@ -56,10 +60,12 @@ function weather(data) {
 
   var day2 = document.getElementById("day2");
   var span2 = day2.getElementsByTagName("span");
-  var icon2 = document.getElementById("icon3");
+  var icon3 = document.getElementById("icon3");
 
-  icon2.classList.replace("qi-301", `qi-${data.data.daily[1].iconDay}`);
-  icon3.classList.replace("qi-301", `qi-${data.data.daily[2].iconDay}`);
+  icon2.classList.remove(icon2.classList.item(0));
+  icon2.classList.add(`qi-${data.data.daily[1].iconDay}`);
+  icon3.classList.remove(icon3.classList.item(0));
+  icon3.classList.add(`qi-${data.data.daily[2].iconDay}`);
 
   span1[0].innerHTML =
     "平均" +
@@ -75,13 +81,16 @@ function weather(data) {
       2 +
     "°C";
 }
-var getLocationCode = [
-  {
-    city: "北京",
-    code: "101010100",
-  },
-  {
-    city: "杭州",
-    code: "101210101",
-  },
-];
+var getLocationCode = {
+  北京: "101010100",
+  杭州: "101210101",
+  上海: "101020100",
+  天津: "101030600",
+  武汉: "101200101",
+  广州: "101280101",
+  香港: "101320101",
+  嘉兴: "101210301",
+  宁波: "101210401",
+  西安: "101050311",
+  呼和浩特: "101080101",
+};

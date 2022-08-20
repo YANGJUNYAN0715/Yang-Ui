@@ -4,7 +4,7 @@ window.onload = function () {
       "https://devapi.qweather.com/v7/weather/3d?location=101010100&key=4426879dbd924be4a3117d52622ceb41"
     )
     .then(function (data) {
-      console.log(data);
+      // console.log(data);
       weather(data);
       document.getElementById("cityname").innerHTML = "北京";
     });
@@ -19,7 +19,7 @@ window.onload = function () {
           }&key=4426879dbd924be4a3117d52622ceb41`
         )
         .then(function (data) {
-          console.log(data);
+          // console.log(data);
           weather(data, city.value);
         });
     } else {
@@ -35,7 +35,7 @@ function weather(data, cityName) {
   var weatherDesc = document.getElementById("weather-desc");
   var icon1 = document.getElementById("icon1");
   cityname.innerHTML = cityName;
-  location.innerHTML = "日出时间:" + data.data.daily[0].sunset;
+  location.innerHTML = "日出时间:" + data.data.daily[0].sunrise;
   dateDay.innerHTML = data.data.updateTime.slice(0, 10);
   weatherTemp.innerHTML =
     (parseInt(data.data.daily[0].tempMax) +
@@ -94,4 +94,8 @@ var getLocationCode = {
   西安: "101050311",
   呼和浩特: "101080101",
   海淀: "101010200",
+  成都: "101270101",
+  石家庄: "101090101",
+  南京: "101190101",
+  苏州: "101190402",
 };

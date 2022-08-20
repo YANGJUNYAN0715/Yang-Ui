@@ -8,7 +8,8 @@
     <title>天气查询</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/index.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/axios.min.js"></script>
+    <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qweather-icons@1.1.1/font/qweather-icons.css">
 </head>
 
@@ -21,13 +22,13 @@
                 <!-- <h2 class="date-dayname" id="date-dayname">周二</h2> -->
                 <h1 class="date-day" id="date-day">2022-08-18</h1>
                 <span id="cityname" style="font-size: 25px;">北京</span>
-                <span class="iconfont">&#xe679;</span>
+                <span class="iconfont" style="font-size: 22px;">&#xe679;</span>
                 <h2 id="location"></h2>
             </div>
             <div class="weather-container">
                 <i class="qi-301" style="font-size:70px;" id="icon1"></i>
                 <div class="weather-temp" id="weather-temp">25°C</div>
-                <div class="weather-desc" id="weather-desc">晴</div>
+                <div class="weather-desc" id="weather-desc" style="font-size: 30px;">晴</div>
             </div>
         </div>
         <!-- 右边部分 -->

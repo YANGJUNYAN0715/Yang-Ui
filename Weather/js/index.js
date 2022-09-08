@@ -1,4 +1,6 @@
+// @ts-nocheck
 window.onload = function () {
+  // @ts-ignore
   axios
     .get(
       "https://devapi.qweather.com/v7/weather/3d?location=101010100&key=4426879dbd924be4a3117d52622ceb41"

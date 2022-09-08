@@ -1,7 +1,28 @@
-# Vue 3 + Vite
+# One Thing React App
+If you’re brand new to React, this is the perfect starter project. We’ll keep the UI very simple so we can focus on concepts like creating components, using and passing state, handling events, prop drilling, and more! 
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+🔗  Key Links 🔗
+- YouTube: https://youtu.be/s84yXvLOoio
+- Demo site: https://codinginpublic.dev/projects/one-thing-react-app/
 
-## Recommended IDE Setup
+---------------------------------------
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+🔗  Additional Links 🔗
+- ViteJS: https://vitejs.dev/guide/
+- Tailwind Installation: https://tailwindcss.com/docs/guides/vite
+- React Hero Icons: https://github.com/tailwindlabs/heroicons
+- JS Confetti: https://www.npmjs.com/package/js-confetti
+
+---------------------------------------
+
+📹  Related Videos 📹
+- Tailwind CSS Landing Page: https://www.youtube.com/watch?v=xpGNcQDmV2A
+- Emmet for HTML: https://youtu.be/AGAXv3GjH60
+
+---------------------------------------
+
+🌐 Connect With Me 🌐 
+- Website: https://codinginpublic.dev
+- Blog: https://chrispennington.blog
+- Twitter: https://twitter.com/cpenned
+- Patreon: https://www.patreon.com/coding_in_public

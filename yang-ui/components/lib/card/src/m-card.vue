@@ -36,3 +36,6 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="less">
+@import "./card.less";
+</style>
